@@ -6,7 +6,7 @@
 
     <groupId>io.github.vinccool96.junit4.generator</groupId>
     <artifactId>junit4-suite-generator</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.0</version>
     <name>JUnit4 TestSuite Generator</name>
     <description>Creates automatically an AllTest file.</description>
     <url>https://github.com/Vinccool96/junit4-suite-generator</url>
@@ -55,8 +55,8 @@
         </dependency>
     </dependencies>
     <scm>
-        <connection>scm:git:https://github.com/Vinccool96/junit4-suite-generator.git</connection>
-        <developerConnection>scm:git:https://github.com/Vinccool96/junit4-suite-generator.git</developerConnection>
+        <connection>scm:svn:https://github.com/Vinccool96/junit4-suite-generator.git</connection>
+        <developerConnection>scm:svn:https://github.com/Vinccool96/junit4-suite-generator.git</developerConnection>
     </scm>
 </project>
 

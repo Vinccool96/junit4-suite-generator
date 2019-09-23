@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="junit4suitegenerator" />
+        <module name="junit4-suite-generator" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="junit4suitegenerator" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
