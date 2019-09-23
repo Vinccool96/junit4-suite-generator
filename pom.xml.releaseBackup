@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.vinccool96.junit4.generator</groupId>
     <artifactId>junit4-suite-generator</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
     <name>JUnit4 TestSuite Generator</name>
     <description>Creates automatically an AllTest file.</description>
     <url>https://github.com/Vinccool96/junit4-suite-generator</url>
@@ -56,24 +57,6 @@
     <scm>
         <connection>scm:git:https://github.com/Vinccool96/junit4-suite-generator.git</connection>
         <developerConnection>scm:git:https://github.com/Vinccool96/junit4-suite-generator.git</developerConnection>
-        <url>https://github.com/Vinccool96/junit4-suite-generator</url>
-        <tag>HEAD</tag>
     </scm>
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-            <comments>A business-friendly OSS license</comments>
-        </license>
-    </licenses>
-    <developers>
-        <developer>
-            <id>Vinccool96</id>
-            <name>Vincent Girard</name>
-            <email>Vinccool96@gmail.com</email>
-
-        </developer>
-    </developers>
 </project>
 
