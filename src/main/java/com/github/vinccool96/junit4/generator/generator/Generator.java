@@ -1,4 +1,4 @@
-package io.github.vinccool96.junit4.generator.generator;
+package com.github.vinccool96.junit4.generator.generator;
 
 import java.io.BufferedWriter;
 import java.io.File;
