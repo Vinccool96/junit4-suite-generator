@@ -63,7 +63,7 @@ public class Generator {
         for (File file : files) {
             if (file.isDirectory()) {
                 addTestFilesOfFolder(classes, file);
-            } else {
+            } else if (FileUtil.getInstance().isTestFile(file)){
                 classes.add(file);
             }
         }

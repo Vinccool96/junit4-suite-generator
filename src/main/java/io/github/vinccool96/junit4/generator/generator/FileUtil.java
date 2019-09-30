@@ -6,7 +6,7 @@ class FileUtil {
 
     private static FileUtil instance;
 
-    public static FileUtil getInstance() {
+    static FileUtil getInstance() {
         if (instance == null) {
             instance = new FileUtil();
         }
@@ -16,20 +16,24 @@ class FileUtil {
     private FileUtil() {
     }
 
-    public boolean isTestFile(File file) throws IOException {
+    boolean isTestFile(File file) {
         boolean result = false;
-        FileReader fr = new FileReader(file);
-        BufferedReader br = new BufferedReader(fr);
-        String line;
-        while ((line = br.readLine()) != null) {
-            if (line.contains("@Test")) {
-                result = true;
-                break;
+        try {
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            String line;
+            while ((line = br.readLine()) != null) {
+                if (line.contains("@Test")) {
+                    result = true;
+                    break;
+                }
+                System.out.println(line);
             }
-            System.out.println(line);
+            br.close();
+            fr.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        br.close();
-        fr.close();
         return result;
     }
 
