@@ -9,6 +9,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 
+/**
+ * Used to generate a JUnit 4 test suite class
+ */
 public class Generator {
 
     private static final String JAVA = ".java";
