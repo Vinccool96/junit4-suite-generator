@@ -24,13 +24,16 @@ public class Generator {
 
     private String currentPackage;
 
+    private String pathToFirstPackage;
+
     private static final String ALL_TESTS_JAVA = ALL_TESTS + JAVA;
 
     private static final String BLANK = "\n";
 
-    public Generator(String currentFolder, String currentPackage) {
+    public Generator(String currentFolder, String currentPackage, String pathToFirstPackage) {
         this.currentFolder = currentFolder;
         this.currentPackage = currentPackage;
+        this.pathToFirstPackage = pathToFirstPackage;
     }
 
     public void generate() {
@@ -66,7 +69,7 @@ public class Generator {
         for (File file : files) {
             if (file.isDirectory()) {
                 addTestFilesOfFolder(classes, file);
-            } else if (FileUtil.getInstance().isTestFile(file)){
+            } else if (FileUtil.getInstance().isTestFile(file)) {
                 classes.add(file);
             }
         }
@@ -77,7 +80,9 @@ public class Generator {
     }
 
     private String getImportString(File testFile) {
-        String name = testFile.toString().replace(".\\src\\", "");
+        String target = this.pathToFirstPackage.contains("/") ? this.pathToFirstPackage.replace("/", "\\") :
+                this.pathToFirstPackage;
+        String name = testFile.toString().replace(target, "");
         return "import " + name.replace(JAVA, ";").replace("\\", ".");
     }
 
