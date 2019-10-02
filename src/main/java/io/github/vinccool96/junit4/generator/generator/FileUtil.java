@@ -27,7 +27,6 @@ class FileUtil {
                     result = true;
                     break;
                 }
-                System.out.println(line);
             }
             br.close();
             fr.close();
