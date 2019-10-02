@@ -83,7 +83,7 @@ public class Generator {
         String target = this.pathToFirstPackage.contains("/") ? this.pathToFirstPackage.replace("/", "\\") :
                 this.pathToFirstPackage;
         String name = testFile.toString().replace(target, "");
-        return "import " + name.replace(JAVA, ";").replace("\\", ".");
+        return "import " + name.replace(JAVA, ";").replace(KOTLIN, ";").replace("\\", ".");
     }
 
     private String getClassString(File testFile) {
