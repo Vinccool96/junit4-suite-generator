@@ -6,7 +6,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.LinkedList;
 
 /**
@@ -40,10 +39,10 @@ public class Generator {
         File thisFolder = new File(currentFolder);
         String allTestsFile = currentFolder + "\\" + ALL_TESTS_JAVA;
         File allTests = new File(allTestsFile);
-        generateFile(thisFolder, allTests, currentPackage);
+        generateFile(thisFolder, allTests);
     }
 
-    private void generateFile(File thisFolder, File allTests, String currentPackage) {
+    private void generateFile(File thisFolder, File allTests) {
         ArrayList<File> testFiles = getTestFiles(thisFolder);
         LinkedList<String> stringsToWrite = new LinkedList<>();
         addStart(stringsToWrite, testFiles);
@@ -105,7 +104,7 @@ public class Generator {
     }
 
     private void addStart(LinkedList<String> stringsToWrite, ArrayList<File> testFiles) {
-        String packageString = "package " + currentPackage + ";";
+        String packageString = "package " + this.currentPackage + ";";
         stringsToWrite.add(packageString);
         addBlank(stringsToWrite);
         LinkedList<String> importStrings = getImportStrings(testFiles);
