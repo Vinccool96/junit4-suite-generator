@@ -100,7 +100,7 @@ public class Generator {
         for (File file : testFiles) {
             importStrings.add(getImportString(file));
         }
-        Collections.sort(importStrings);
+        importStrings.sort(new ImportStringComparator());
         return importStrings;
     }
 
